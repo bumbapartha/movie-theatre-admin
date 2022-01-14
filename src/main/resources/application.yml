@@ -1,7 +1,8 @@
 server:
   port: 8100
 spring:
-  application: movie-theatre-admin
+  application: 
+    name: movie-theatre-admin
   datasource:
     url: jdbc:h2:mem:mydb
     username: sa

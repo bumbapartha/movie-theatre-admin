@@ -19,7 +19,8 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	public long id; 
 	
-	String name;
+	
+	public String name;
 	
 
 }
