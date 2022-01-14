@@ -17,27 +17,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Show {
+public class TicketBooked {
 	
 	@Id
 	@GeneratedValue
 	public long id;
 	
-	//24 hour format
-	public int startHour;
-	
-	//0 - 60 min
-	public int startMin;
-	
-	public Date startDate;
-	
-	public Date endDate;
-	
-	public double price;
-	
 	@ManyToOne
-    private Movie movie;
+	private Show show;
 	
-	@ManyToOne
-    private Theatre theatre;
+	private int seat;
+	
+	private Date showdate;
+	
+	//CONFIRMED, RESERVE(To book for temporary)
+	private String status;
+	
+	private Date bookingTime;
+
 }

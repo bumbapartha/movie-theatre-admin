@@ -30,5 +30,10 @@ public class ShowController {
 	public Show createShow(@RequestBody Show show) {
 		return service.createShow(show);
 	}
+	
+	
+	
+	
+	
 
 }

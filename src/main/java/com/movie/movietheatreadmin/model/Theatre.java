@@ -6,22 +6,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 public class Theatre {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	public long id; 
+	private long id; 
 	
-	public String name;
+	private String name;
 	
 	//Can be a separate model but keeping the data here for simple implementation
-	public String city; 
+	private String city; 
+	
+	private int seatCount;
 
 }
